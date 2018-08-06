@@ -1,8 +1,8 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
+  <% link_to "/index.html", class: "navbar-wagon-brand" do %>
     <%= image_tag "logo.png", id: "logo" %>
-  </a>
+  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -30,10 +30,17 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="index">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
-        <%= link_to "Meet the team", "team", class: "navbar-wagon-item navbar-wagon-link" %>
+        <li>
+          <%= link_to "Host", "index", class: "navbar-wagon-item navbar-wagon-link" %>
+        </li>
+        <li>
+          <%= link_to "Trips", "", class: "navbar-wagon-item navbar-wagon-link" %>
+        <li>
+          <%= link_to "Messagese", "", class: "navbar-wagon-item navbar-wagon-link" %>
+        </li>
+        <li>
+          <%= link_to "Meet the team", "team", class: "navbar-wagon-item navbar-wagon-link" %>
+        </li>
       </ul>
     </div>
   </div>
